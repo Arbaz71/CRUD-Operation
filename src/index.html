@@ -1,21 +1,70 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>CRUDOperation</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
- <link rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:wght@100;200;300;400;500;600;700;800;900;1000&display=swap"
- rel="stylesheet"> 
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
- <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
-</head>
-<body>
-  <app-root></app-root>
-  <script src="http://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#153a0b" />
+    <meta name="msapplication-navbutton-color" content="#153a0b" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#153a0b" />
+    <!-- clear cache for application -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- clear cache for application -->
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,700|Material+Icons"
+      rel="stylesheet"
+    />
+    
+    <style type="text/css">
+      .loading::before,
+      .loading::after {
+        position: fixed;
+        z-index: 3000;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .loading::before {
+        content: "";
+        background-color: #fff;
+      }
+
+      .loading::after {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        content: "LOADING";
+        text-align: center;
+        white-space: pre;
+        font-weight: normal;
+        font-size: 24px;
+        letter-spacing: 0.04rem;
+        color: #000;
+        opacity: 0.8;
+        animation: animation 1s alternate infinite;
+      }
+
+      @keyframes animation {
+        to {
+          opacity: 0.2;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <app-root> <div class="loading"></div> </app-root>
+  </body>
 </html>
